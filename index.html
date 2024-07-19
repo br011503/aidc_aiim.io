@@ -59,7 +59,7 @@
 
             controls = new THREE.OrbitControls(camera, renderer.domElement);
             controls.addEventListener('change', renderer);
-\
+
             let loader = new THREE.GLTFLoader();
             loader.load('https://raw.githubusercontent.com/br011503/aidc_aiim.io/tree/main/public/models/', 'server.glb', function(gltf){
                 //Reduce the Car size by half
