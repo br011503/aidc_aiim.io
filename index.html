@@ -60,7 +60,7 @@
             controls.addEventListener('change', renderer);
 
             let loader = new THREE.GLTFLoader();
-            loader.load('gltf/scene.gltf', function(gltf){
+            loader.load('/gltf/scene.gltf', function(gltf){
                 //Reduce the Car size by half
                 car = gltf.scene.children[0];
                 car.scale.set(0.5, 0.5, 0.5);
