@@ -60,7 +60,7 @@
             controls = new THREE.OrbitControls(camera, renderer.domElement);
             controls.addEventListener('change', renderer);
 
-            let loader = new THREE.GLTFLoader();
+            let loader = new THREE.GLBLoader();
             loader.load('/model/server.glb', function(gltf){
                 //Reduce the Car size by half
                 car = gltf.scene.children[0];
