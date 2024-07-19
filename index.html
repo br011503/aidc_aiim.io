@@ -1,3 +1,4 @@
+{% load public %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,7 +62,7 @@
             controls.addEventListener('change', renderer);
 
             let loader = new THREE.GLTFLoader();
-            loader.load('https://github.com/br011503/aidc_aiim.io/blob/main/public/models/server.glb', function(gltf){
+            loader.load('public/models/server.glb', function(gltf){
                 //Reduce the Car size by half
                 car = gltf.scene.children[0];
                 car.scale.set(0.5, 0.5, 0.5);
