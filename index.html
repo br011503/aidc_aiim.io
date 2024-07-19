@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/FBXLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/MTLLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/OBJLoader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLBLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/libs/fflate.min.js"></script></head>
 
@@ -60,7 +60,7 @@
             controls = new THREE.OrbitControls(camera, renderer.domElement);
             controls.addEventListener('change', renderer);
 
-            let loader = new THREE.GLBLoader();
+            let loader = new THREE.GLTFLoader();
             loader.load('/model/server.glb', function(gltf){
                 //Reduce the Car size by half
                 car = gltf.scene.children[0];
