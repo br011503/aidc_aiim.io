@@ -35,7 +35,7 @@
             scene.add(hlight);
 
             // 방향성 조명의 강도를 낮춤
-            directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+            directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
             directionalLight.position.set(0, 1, 0);
             directionalLight.castShadow = true;
             directionalLight.shadow.mapSize.width = 2048; // 그림자 해상도 설정
@@ -50,7 +50,7 @@
             scene.add(directionalLight);
 
             // 포인트 라이트의 강도를 낮춤
-            light = new THREE.PointLight(0xc4c4c4, 1);
+            light = new THREE.PointLight(0xc4c4c4, 2);
             light.position.set(500, 300, 500);
             light.castShadow = true;
             light.shadow.mapSize.width = 1024; // 그림자 해상도 설정
