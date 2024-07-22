@@ -88,7 +88,7 @@
                 let model2 = gltf.scene.children[0];
                 model2.scale.set(0.4, 0.4, 0.4);
                 model2.position.set(0, 0, 70); // 가운데가 수직축(Z)
-                model2.rotation.y = THREE.MathUtils.degToRad(180); // 모델회전
+                model2.rotation.x = THREE.MathUtils.degToRad(180); // 모델회전
                 model2.castShadow = true; // 모델에 그림자 적용
                 model2.receiveShadow = true; // 모델이 그림자를 받을 수 있도록 설정
                 scene.add(gltf.scene);
