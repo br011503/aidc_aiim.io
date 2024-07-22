@@ -74,7 +74,7 @@
                 // 모델 크기를 절반으로 줄임
                 let model1 = gltf.scene.children[0];
                 model1.scale.set(0.5, 0.5, 0.5);
-                // model1.potision.set(0, 0, 0);
+                model1.position.set(0, 0, 0);
                 model1.castShadow = true; // 모델에 그림자 적용
                 model1.receiveShadow = true; // 모델이 그림자를 받을 수 있도록 설정
                 scene.add(gltf.scene);
