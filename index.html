@@ -82,7 +82,6 @@
             });
             
             // 쿨러로딩
-            let loader = new THREE.GLTFLoader();
             loader.load('public/models/CRAH_PH250_FRONT_FLOW.glb', function (gltf) {
                 // 모델 크기를 절반으로 줄임
                 let model2 = gltf.scene.children[0];
