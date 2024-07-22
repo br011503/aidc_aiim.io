@@ -67,6 +67,13 @@
 
             controls = new THREE.OrbitControls(camera, renderer.domElement);
             controls.addEventListener('change', renderer);
+
+            // 그리드 설정
+            const gridHelper = new THREE.GridHelper(50, 10, 0x000000, 0xffffff);
+            scene.add(gridHelper);
+            // // ground
+            // const groundGeo = new THREE.PlaneGeometry(50, 50)
+            // const groundMat = new THREE.MeshPhongMeterial({color: 0x00ff00});
             
             // 컨테인먼트 모델
             let loader = new THREE.GLTFLoader();
