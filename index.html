@@ -25,7 +25,11 @@
 
         function init() {
             scene = new THREE.Scene();
-            scene.background = new THREE.Color(0x000000); // 배경색을 검정색으로 설정
+            // scene.background = new THREE.Color(0x000000); // 배경색을 검정색으로 설정
+            var buffgeoBack = new THREE.BufferGeometry();
+            buffgeoBack.fromGeometry( new THREE.IcosahedronGeometry(3000,2) );
+            var back = new THREE.Mesh( buffgeoBack, new THREE.MeshBasicMaterial( { map:gradTexture([[0.75,0.6,0.4,0.25], ['#1B1D1E','#3D4143','#72797D', '#b0babf']]), side:THREE.BackSide, depthWrite: false, fog:false }  ));
+            scene.add( back );
 
             camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 5000);
             camera.rotation.y = 45 / 180 * Math.PI;
